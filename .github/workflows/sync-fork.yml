@@ -16,6 +16,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
+      - name: Set Git User
+        run: |
+          git config --global user.name "Todd Walters"
+          git config --global user.email "junk4walters@gmail.com"
+
       - name: Add Upstream Remote
         run: git remote add upstream https://github.com/PacktPublishing/LLM-Engineers-Handbook.git
 
